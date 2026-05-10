@@ -29,6 +29,6 @@
 <version>3.4.0</version>
 </plugin>
 </plugins>
-<finalName>mavansipipe</finalName>
+<finalName>mavansibpipe</finalName>
 </build>
 </project>
