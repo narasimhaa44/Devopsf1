@@ -5,8 +5,8 @@
   tasks: 
     - name: Copy WAR file to Tomcat
       copy:
-        src: "/var/snap/jenkins/5013/workspace/mavansibpipe/target/mavansibpipe.war"
-        dest: "opt/tomcat/webapps/mavansibpipe.war"
+        src: "/var/snap/jenkins/5013/workspace/mavansipipe/target/mavansipipe.war"
+        dest: "opt/tomcat/webapps/mavansipipe.war"
         remote_src: no
         
     - name: Restart Tomcat
