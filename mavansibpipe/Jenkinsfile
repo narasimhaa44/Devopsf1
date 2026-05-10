@@ -20,19 +20,25 @@ pipeline {
 
         stage('Build WAR') {
             steps {
-                    sh 'mvn clean package' 
+                dir('mavansibpipe'){
+                    sh 'mvn clean package'
+                }
             }
         }
         
         stage('Archive') {
         	steps {
+                dir('mavansibpipe'){
         		archiveArtifacts artifacts: 'target/*.war , fingerprint:true
+                }
         	}
         }
         stage('Deploy to Tomcat') {
             steps {
+                dir('mavansibpipe'){
                sh 'mvn clean package'
-               sh 'ansible-playbook playbook.yml -i hosts.ini'      
+               sh 'ansible-playbook playbook.yml -i hosts.ini'
+                }
             }
         }
 
