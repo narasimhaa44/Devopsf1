@@ -14,7 +14,7 @@ pipeline {
 
         stage('Checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/narasimhaa44/mavansibpipe.git'
+                git branch: 'main', url: 'https://github.com/narasimhaa44/Devopsf1.git'
             }
         }
 
